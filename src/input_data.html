@@ -5,19 +5,19 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <link href="/dist/output.css" rel="stylesheet" />
   </head>
-  <body class="bg-slate-500">
+  <body class="bg-slate-400">
     <section>
-      <div class="container flex xl:columns-2 mx-auto p-5 xl:px-48">
+      <div class="container flex xl:columns-2 mx-auto pt-14 xl:px-48 p-5">
         <div
           id="carousel"
-          class="p-10 border border-slate-500 shadow-2xl rounded-lg bg-white w-full xl:w-1/2 overflow-hidden"
+          class="p-10 rounded-lg border border-slate-500 shadow-2xl xl:rounded-s-lg bg-white w-full xl:w-1/2 overflow-hidden xl:border-none"
         >
           <div class="carousel-slide flex gap-10">
             <div id="form1" class="carousel-form active flex-shrink-0 w-full">
               <h1 class="text-3xl font-bold mt-3 mb-3 text-slate-800">
                 TAMBAH DATA
               </h1>
-              <p class="text-base mb-3 text-sm text-slate-500">
+              <p class="mb-3 text-sm text-slate-500">
                 Isikan data dengan baik dan benar!
               </p>
               <input
@@ -39,7 +39,6 @@
                 type="text"
                 class="border focus:placeholder:text-transparent placeholder:text-sm focus:outline-none w-full mt-2 rounded-md py-1 px-3 border-slate-400 mb-4 focus:border-sky-600 focus:ring-1 focus:ring-sky-500"
               />
-
               <textarea
                 placeholder="Alamat"
                 name="Alamat"
@@ -50,11 +49,14 @@
               ></textarea>
               <!-- Form 1 content -->
             </div>
-            <div id="form2" class="carousel-form flex-shrink-0 w-full">
+            <div
+              id="form2"
+              class="carousel-form flex-shrink-0 w-full 
+            >
               <h1 class="text-3xl font-bold mt-3 mb-3 text-slate-800">
-                TAMBAH DATA
+                TAMBAH DATA 2
               </h1>
-              <p class="text-base mb-3 text-sm text-slate-500">
+              <p class="mb-3 text-sm text-slate-500">
                 Isikan data dengan baik dan benar!
               </p>
               <input
@@ -91,7 +93,7 @@
               <h1 class="text-3xl font-bold mt-3 mb-3 text-slate-800">
                 TAMBAH DATA 3
               </h1>
-              <p class="text-base mb-3 text-sm text-slate-500">
+              <p class="mb-3 text-sm text-slate-500">
                 Isikan data dengan baik dan benar!
               </p>
               <input
@@ -135,12 +137,19 @@
           </div>
         </div>
         <div
-          class="bg-bottom rounded-e-lg w-1/2 hidden xl:inline-block shadow-2xl border"
+          class="bg-bottom rounded-e-lg w-1/2 hidden xl:inline-block shadow-2xl relative"
           style="
             background-image: url(../dist/img/bg.jpg);
             background-size: cover;
           "
-        ></div>
+        >
+          <img
+            src="../dist/img/Logo.png"
+            width="120px"
+            alt=""
+            class="absolute -top-5 -right-3 me-5"
+          />
+        </div>
       </div>
     </section>
   </body>
