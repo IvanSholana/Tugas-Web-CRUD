@@ -8,46 +8,148 @@
   <body>
     <section>
       <div class="container mx-auto p-10 border space-y-5 h-full">
-        <div class="p-5 border">
+        <div class="p-9 border rounded-lg">
           <div
             id="carousel-container"
-            class="mx-auto flex w-full border overflow-hidden"
+            class="mx-auto overflow-hidden flex w-full  gap-5"
           >
-            <div class="carousel-item flex-shrink-0 w-full ">
-              <h1 class="text-center border mb-5">HELLO WORLD 1</h1>
+            <div class="carousel-item flex-shrink-0 w-full">
+              <h1 class="text-3xl font-bold mt-3 mb-3 text-slate-800">
+                TAMBAH DATA
+              </h1>
+              <p class="mb-3 text-sm text-slate-500">
+                Isikan data dengan baik dan benar!
+              </p>
+              <input
+                placeholder="NIM"
+                type="text"
+                name="NIM"
+                id="NIM"
+                class="border focus:placeholder:text-transparent placeholder:text-sm focus:outline-none w-full mt-2 rounded-md py-1 px-3 mb-4 border-slate-400 focus:border-sky-600 focus:ring-1 focus:ring-sky-500"
+              />
+              <input
+                placeholder="Nama Lengkap"
+                type="text"
+                class="border focus:placeholder:text-transparent placeholder:text-sm focus:outline-none w-full mt-2 rounded-md py-1 px-3 border-slate-400 mb-4 focus:border-sky-600 focus:ring-1 focus:ring-sky-500"
+              />
+              <input
+                placeholder="Nomer Telepon"
+                name="nomer_telepon"
+                id="nomer_telepon"
+                type="text"
+                class="border focus:placeholder:text-transparent placeholder:text-sm focus:outline-none w-full mt-2 rounded-md py-1 px-3 border-slate-400 mb-4 focus:border-sky-600 focus:ring-1 focus:ring-sky-500"
+              />
+              <textarea
+                placeholder="Alamat"
+                name="Alamat"
+                id="Alamat"
+                cols="30"
+                rows="5"
+                class="border focus:placeholder:text-transparent placeholder:text-sm focus:outline-none w-full mt-2 rounded-md py-3 px-3 border-slate-400 mb-4 focus:border-sky-600 focus:ring-1 focus:ring-sky-500"
+              ></textarea>
               <div class="flex justify-center">
                 <button
-                  class="next-button bg-slate-800 text-white px-24 py-2 rounded-lg"
+                  class="next-button bg-slate-800 text-white w-full py-2 rounded-lg"
                 >
                   LANJUTKAN
                 </button>
               </div>
             </div>
+            <!-- FORM 2 -->
             <div class="carousel-item flex-shrink-0 w-full">
-              <h1 class="text-center border mb-5">HELLO WORLD 2</h1>
-              <div class="flex justify-evenly">
+              <h1 class="text-3xl font-bold mt-3 mb-3 text-slate-800">
+                TAMBAH DATA
+              </h1>
+              <p class="mb-3 text-sm text-slate-500">
+                Isikan data dengan baik dan benar!
+              </p>
+              <div class="border p-4 box-border rounded-lg border-slate-800 bg-slate-50">
+                <p class="font-bold mb-3">Hobi</p>
+              <div class="flex items-center">
+                <input id="checkbox" type="checkbox" class="form-checkbox h-5 w-5 text-indigo-600 transition duration-150 ease-in-out">
+                <label for="checkbox" class="ml-2 text-gray-700 me-3">Belajar</label>
+                <input id="checkbox" type="checkbox" class="form-checkbox h-5 w-5 text-indigo-600 transition duration-150 ease-in-out">
+                <label for="checkbox" class="ml-2 text-gray-700 me-3">Bekerja</label>
+                <input id="checkbox" type="checkbox" class="form-checkbox h-5 w-5 text-indigo-600 transition duration-150 ease-in-out">
+                <label for="checkbox" class="ml-2 text-gray-700 me-3">Makan</label>
+         
+              </div>
+            </div>
+              <input
+                placeholder="Nama Lengkap"
+                type="text"
+                class="border focus:placeholder:text-transparent placeholder:text-sm focus:outline-none w-full mt-2 rounded-md py-1 px-3 border-slate-400 mb-4 focus:border-sky-600 focus:ring-1 focus:ring-sky-500"
+              />
+              <input
+                placeholder="Nomer Telepon"
+                name="nomer_telepon"
+                id="nomer_telepon"
+                type="text"
+                class="border focus:placeholder:text-transparent placeholder:text-sm focus:outline-none w-full mt-2 rounded-md py-1 px-3 border-slate-400 mb-4 focus:border-sky-600 focus:ring-1 focus:ring-sky-500"
+              />
+              <textarea
+                placeholder="Alamat"
+                name="Alamat"
+                id="Alamat"
+                cols="30"
+                rows="5"
+                class="border focus:placeholder:text-transparent placeholder:text-sm focus:outline-none w-full mt-2 rounded-md py-3 px-3 border-slate-400 mb-4 focus:border-sky-600 focus:ring-1 focus:ring-sky-500"
+              ></textarea>
+              <div class="flex justify-between">
                 <button
-                  class="next-button bg-slate-800 px-10 text-white py-1 rounded-lg"
+                  class="next-button bg-slate-800 w-32 text-white py-1 rounded-lg"
                 >
                   LANJUTKAN
                 </button>
                 <button
-                  class="prev-button bg-slate-800  px-10 text-white  py-2 rounded-lg"
+                  class="prev-button bg-slate-800 w-32 text-white  py-2 rounded-lg"
                 >
                   KEMBALI
                 </button>
               </div>
             </div>
             <div class="carousel-item flex-shrink-0 w-full">
-              <h1 class="text-center border mb-5">HELLO WORLD 3</h1>
-              <div class="flex justify-evenly">
+              <h1 class="text-3xl font-bold mt-3 mb-3 text-slate-800">
+                TAMBAH DATA
+              </h1>
+              <p class="mb-3 text-sm text-slate-500">
+                Isikan data dengan baik dan benar!
+              </p>
+              <input
+                placeholder="NIM"
+                type="text"
+                name="NIM"
+                id="NIM"
+                class="border focus:placeholder:text-transparent placeholder:text-sm focus:outline-none w-full mt-2 rounded-md py-1 px-3 mb-4 border-slate-400 focus:border-sky-600 focus:ring-1 focus:ring-sky-500"
+              />
+              <input
+                placeholder="Nama Lengkap"
+                type="text"
+                class="border focus:placeholder:text-transparent placeholder:text-sm focus:outline-none w-full mt-2 rounded-md py-1 px-3 border-slate-400 mb-4 focus:border-sky-600 focus:ring-1 focus:ring-sky-500"
+              />
+              <input
+                placeholder="Nomer Telepon"
+                name="nomer_telepon"
+                id="nomer_telepon"
+                type="text"
+                class="border focus:placeholder:text-transparent placeholder:text-sm focus:outline-none w-full mt-2 rounded-md py-1 px-3 border-slate-400 mb-4 focus:border-sky-600 focus:ring-1 focus:ring-sky-500"
+              />
+              <textarea
+                placeholder="Alamat"
+                name="Alamat"
+                id="Alamat"
+                cols="30"
+                rows="5"
+                class="border focus:placeholder:text-transparent placeholder:text-sm focus:outline-none w-full mt-2 rounded-md py-3 px-3 border-slate-400 mb-4 focus:border-sky-600 focus:ring-1 focus:ring-sky-500"
+              ></textarea>
+              <div class="flex justify-between">
                 <button
-                  class="next-button bg-slate-800 px-10 text-white py-1 rounded-lg"
+                  class="next-button bg-slate-800 w-32 text-white py-1 rounded-lg"
                 >
                   LANJUTKAN
                 </button>
                 <button
-                  class="prev-button bg-slate-800  px-10 text-white  py-2 rounded-lg"
+                  class="prev-button bg-slate-800 w-32 text-white  py-2 rounded-lg"
                 >
                   KEMBALI
                 </button>
@@ -72,9 +174,13 @@
             currentItem++;
           }
           
-          var translateXValue = -1 * currentItem * slidesWidth;
+          if(currentItem == slidesTotal - 1){
+            var translateXValue = -1 * currentItem * slidesWidth - 40;
+          }else{
+            var translateXValue = -1 * currentItem * slidesWidth - 20;
+          }
           
-          slides.css("transform", "translateX(" + translateXValue + "px)");
+          slides.css("transform", "translateX(" + translateXValue  + "px)");
         }
     
         function prevSlide() {
@@ -82,7 +188,11 @@
             currentItem--;
           }
           
-          var translateXValue = -1 * currentItem * slidesWidth;
+          if(currentItem == 0){
+            var translateXValue = -1 * currentItem * slidesWidth;
+          }else{
+            var translateXValue = -1 * currentItem * slidesWidth - 20;
+          }
           
           slides.css("transform", "translateX(" + translateXValue + "px)");
         }
