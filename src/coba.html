@@ -11,7 +11,7 @@
         <div class="p-5 border">
           <div
             id="carousel-container"
-            class="mx-auto flex w-full border "
+            class="mx-auto flex w-full border overflow-hidden"
           >
             <div class="carousel-item flex-shrink-0 w-full ">
               <h1 class="text-center border mb-5">HELLO WORLD 1</h1>
@@ -66,51 +66,38 @@
         var currentItem = 0;
         var slidesWidth = slides.width();
         var slidesTotal = slides.length;
-
+    
         function nextSlide() {
-         
-          if (currentItem < slidesTotal) {
+          if (currentItem < slidesTotal - 1) {
             currentItem++;
           }
-          $(slides[currentItem - 1]).css(
-            "transform",
-            "translateX(-" + currentItem * slidesWidth + "px)"
-          );
-          $(slides[currentItem]).css(
-            "transform",
-            "translateX(-" + currentItem * slidesWidth + "px)"
-          );
+          
+          var translateXValue = -1 * currentItem * slidesWidth;
+          
+          slides.css("transform", "translateX(" + translateXValue + "px)");
         }
-
+    
         function prevSlide() {
-          if (currentItem < slidesTotal) {
+          if (currentItem > 0) {
             currentItem--;
           }
-          $(slides[currentItem + 1]).css(
-            "transform",
-            "translateX(" + currentItem * slidesWidth + "px)"
-          );
-          $(slides[currentItem]).css(
-            "transform",
-            "translateX(" + currentItem * slidesWidth + "px)"
-          );
-        }
-
-        $(".next-button").click(function () {
-          if(currentItem < slidesTotal - 1){
-            nextSlide();
-          }
           
+          var translateXValue = -1 * currentItem * slidesWidth;
+          
+          slides.css("transform", "translateX(" + translateXValue + "px)");
+        }
+    
+        $(".next-button").click(function () {
+          nextSlide();
           console.log(currentItem);
         });
-
-        $(".prev-button").click(function(){
-          if(currentItem > 0){
-            prevSlide();
-          }
+    
+        $(".prev-button").click(function () {
+          prevSlide();
           console.log(currentItem);
         });
       });
     </script>
+    
   </body>
 </html>
