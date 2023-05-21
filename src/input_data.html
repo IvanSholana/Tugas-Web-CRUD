@@ -10,7 +10,7 @@
       <div class="container flex xl:columns-2 mx-auto pt-14 xl:px-48 p-5">
         <div
           id="carousel"
-          class="p-10 rounded-lg border border-slate-500 shadow-2xl xl:rounded-s-lg bg-white w-full xl:w-1/2 overflow-hidden xl:border-none"
+          class="p-10 xl:rounded-s-lg border border-slate-500 shadow-2xl rounded-lg xl:rounded-e-none bg-white w-full xl:w-1/2 overflow-hidden xl:border-none"
         >
           <div class="carousel-slide flex gap-10">
             <div id="form1" class="carousel-form active flex-shrink-0 w-full">
@@ -127,21 +127,18 @@
               <!-- Form 3 content -->
             </div>
           </div>
-          <div id="carousel-buttons">
             <button
+            id="next-button"
               class="prev-button border w-full py-2 rounded-lg bg-slate-800 text-white font-semibold hover:bg-slate-950"
-              onclick="prevForm()"
             >
               Lanjutkan
             </button>
-          </div>
         </div>
         <div
           class="bg-bottom rounded-e-lg w-1/2 hidden xl:inline-block shadow-2xl relative"
           style="
             background-image: url(../dist/img/bg.jpg);
-            background-size: cover;
-          "
+            background-size: cover;"
         >
           <img
             src="../dist/img/Logo.png"
@@ -153,4 +150,6 @@
       </div>
     </section>
   </body>
+  <script src="../node_modules/jquery/dist/jquery.min.js"></script>
+  <script src="../dist/js/main.js"></script>
 </html>

@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link href="/dist/output.css" rel="stylesheet" />
+  </head>
+  <body>
+    <section>
+      <div class="container mx-auto p-10 border space-y-5 h-full">
+        <div class="p-5 border">
+          <div
+            id="carousel-container"
+            class="mx-auto flex w-full border "
+          >
+            <div class="carousel-item flex-shrink-0 w-full ">
+              <h1 class="text-center border mb-5">HELLO WORLD 1</h1>
+              <div class="flex justify-center">
+                <button
+                  class="next-button bg-slate-800 text-white px-24 py-2 rounded-lg"
+                >
+                  LANJUTKAN
+                </button>
+              </div>
+            </div>
+            <div class="carousel-item flex-shrink-0 w-full">
+              <h1 class="text-center border mb-5">HELLO WORLD 2</h1>
+              <div class="flex justify-evenly">
+                <button
+                  class="next-button bg-slate-800 px-10 text-white py-1 rounded-lg"
+                >
+                  LANJUTKAN
+                </button>
+                <button
+                  class="prev-button bg-slate-800  px-10 text-white  py-2 rounded-lg"
+                >
+                  KEMBALI
+                </button>
+              </div>
+            </div>
+            <div class="carousel-item flex-shrink-0 w-full">
+              <h1 class="text-center border mb-5">HELLO WORLD 3</h1>
+              <div class="flex justify-evenly">
+                <button
+                  class="next-button bg-slate-800 px-10 text-white py-1 rounded-lg"
+                >
+                  LANJUTKAN
+                </button>
+                <button
+                  class="prev-button bg-slate-800  px-10 text-white  py-2 rounded-lg"
+                >
+                  KEMBALI
+                </button>
+              </div>
+            </div>
+            </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+    <script src="../node_modules/jquery/dist/jquery.min.js"></script>
+    <script>
+      $(document).ready(function () {
+        var slides = $(".carousel-item");
+        var currentItem = 0;
+        var slidesWidth = slides.width();
+        var slidesTotal = slides.length;
+
+        function nextSlide() {
+         
+          if (currentItem < slidesTotal) {
+            currentItem++;
+          }
+          $(slides[currentItem - 1]).css(
+            "transform",
+            "translateX(-" + currentItem * slidesWidth + "px)"
+          );
+          $(slides[currentItem]).css(
+            "transform",
+            "translateX(-" + currentItem * slidesWidth + "px)"
+          );
+        }
+
+        function prevSlide() {
+          if (currentItem < slidesTotal) {
+            currentItem--;
+          }
+          $(slides[currentItem + 1]).css(
+            "transform",
+            "translateX(" + currentItem * slidesWidth + "px)"
+          );
+          $(slides[currentItem]).css(
+            "transform",
+            "translateX(" + currentItem * slidesWidth + "px)"
+          );
+        }
+
+        $(".next-button").click(function () {
+          if(currentItem < slidesTotal - 1){
+            nextSlide();
+          }
+          
+          console.log(currentItem);
+        });
+
+        $(".prev-button").click(function(){
+          if(currentItem > 0){
+            prevSlide();
+          }
+          console.log(currentItem);
+        });
+      });
+    </script>
+  </body>
+</html>
