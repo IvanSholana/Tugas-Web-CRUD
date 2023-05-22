@@ -1,20 +1,44 @@
 $(document).ready(function () {
-  var slideContainer = $("#carousel");
-  var slides = $("#carousel .carousel-slide");
-  var widthslide = slides.width();
-  var currentIndex = 0;
+  var slides = $(".carousel-item");
+  var currentItem = 0;
+  var slidesWidth = slides.width();
+  var slidesTotal = slides.length;
 
   function nextSlide() {
-    if (currentIndex < slides.length) {
-      currentIndex++;
+    if (currentItem < slidesTotal - 1) {
+      currentItem++;
     }
-    slideContainer.css(
-      "transform",
-      "translateX(-" + currentIndex * widthslide + "px)"
-    );
 
-    $("#next-buttons").click(function () {
-      nextSlide();
-    });
+    if (currentItem == slidesTotal) {
+      var translateXValue = -1 * currentItem * slidesWidth - 40;
+    } else {
+      var translateXValue = -1 * currentItem * slidesWidth - 20;
+    }
+
+    slides.css("transform", "translateX(" + translateXValue + "px)");
   }
+
+  function prevSlide() {
+    if (currentItem > 0) {
+      currentItem--;
+    }
+
+    if (currentItem == 0) {
+      var translateXValue = -1 * currentItem * slidesWidth;
+    } else {
+      var translateXValue = -1 * currentItem * slidesWidth - 20;
+    }
+
+    slides.css("transform", "translateX(" + translateXValue + "px)");
+  }
+
+  $(".next-button").click(function () {
+    nextSlide();
+    console.log(currentItem);
+  });
+
+  $(".prev-button").click(function () {
+    prevSlide();
+    console.log(currentItem);
+  });
 });
