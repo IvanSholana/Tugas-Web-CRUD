@@ -4,41 +4,35 @@ $(document).ready(function () {
   var slidesWidth = slides.width();
   var slidesTotal = slides.length;
 
+  function updateSlidePosition(tambah) {
+    var translateXValue = -1 * currentItem * slidesWidth - tambah;
+    slides.css("transform", "translateX(" + translateXValue + "px)");
+  }
+
   function nextSlide() {
     if (currentItem < slidesTotal - 1) {
       currentItem++;
+      updateSlidePosition(20);
     }
-
-    if (currentItem == slidesTotal) {
-      var translateXValue = -1 * currentItem * slidesWidth - 40;
-    } else {
-      var translateXValue = -1 * currentItem * slidesWidth - 20;
-    }
-
-    slides.css("transform", "translateX(" + translateXValue + "px)");
   }
 
   function prevSlide() {
     if (currentItem > 0) {
       currentItem--;
+      updateSlidePosition(0);
     }
-
-    if (currentItem == 0) {
-      var translateXValue = -1 * currentItem * slidesWidth;
-    } else {
-      var translateXValue = -1 * currentItem * slidesWidth - 20;
-    }
-
-    slides.css("transform", "translateX(" + translateXValue + "px)");
   }
+
+  $(window).resize(function () {
+    slidesWidth = slides.width();
+    updateSlidePosition();
+  });
 
   $(".next-button").click(function () {
     nextSlide();
-    console.log(currentItem);
   });
 
   $(".prev-button").click(function () {
     prevSlide();
-    console.log(currentItem);
   });
 });
