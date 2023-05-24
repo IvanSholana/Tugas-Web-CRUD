@@ -27,15 +27,16 @@ function UpdateData($connection,$NIM,$NamaLengkap,$Alamat,$NoTelepon,$Hobi,$Prod
     }
 }
 
-function Upload($NamaFile,$Error,$tmpName){
+function Upload($NamaFile,$Error,$tmpName,$foto){
     $validformat = ['jpg','jpeg','png'];
     $formatGambar = explode('.',$NamaFile);
-    if($Error == 4){
+    if($Error == 4 && empty($foto)){
         echo "<script> 
         alert('Upload Gambar Error');
          </script>";
     return false;
-    }elseif(!(in_array(strtolower(end($formatGambar)),$validformat))){
+    }
+    if(!(in_array(strtolower(end($formatGambar)),$validformat)) && empty($foto)){
         echo "<script> 
         alert('Format Gambar Error');
          </script>";

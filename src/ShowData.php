@@ -16,9 +16,9 @@ $connection = koneksi("mahasiswa");
     <title>Document</title>
     <link rel="stylesheet" href="../dist/output.css" />
   </head>
-  <body>
+  <body class="bg-slate-300">
     <div id="container" class=" p-8 w-full xl:w-1/4 mx-auto">
-        <div class="border shadow-2xl rounded-xl overflow-hidden">
+        <div class="border shadow-2xl rounded-xl overflow-hidden bg-white">
       <div
         class="border border-slate-900 w-full h-60 bg-cover bg-center rounded-t-xl rounded-b-3xl "
         style="background-image: url(../dist/img/<?= $DataList['foto'] ?>)"

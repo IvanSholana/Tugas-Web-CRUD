@@ -35,14 +35,17 @@ if(isset($_POST['submit_data'])){
   $error = $_FILES['gambar']['error'];
   $tmpName = $_FILES['gambar']['tmp_name'];
 
-  $ImgName = Upload($nama_file,$error,$tmpName);
+  $ImgName = Upload($nama_file,$error,$tmpName,$foto);
   
   if(isset($_POST['hobi'])){
     $Hobi = $_POST['hobi'];
     $HobiValue = implode(',',$Hobi); 
   }
   if(isset($_GET['NIM'])){
-    if(!empty($foto)){
+    if(!empty($ImgName)){
+      $ImgName = Upload($nama_file,$error,$tmpName);
+    }
+    elseif(!empty($foto)){
       $ImgName = $foto;
     }
     UpdateData($connection, $_POST['NIM'],$_POST['NamaLengkap'],$_POST['NoHP'],$_POST['Alamat'],$HobiValue,$_POST['Prodi'],$_POST['Fakultas'],$_POST['JenisKelamin'],$ImgName);
