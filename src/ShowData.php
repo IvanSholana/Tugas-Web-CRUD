@@ -1,3 +1,12 @@
+<?php
+require_once "koneksi.php";
+$connection = koneksi("mahasiswa");
+
+  $query = mysqli_query($connection,"SELECT * FROM data_mahasiswa where NIM = $_GET[NIM]");
+  $DataList = mysqli_fetch_array($query);
+
+?>
+
 <!DOCTYPE html>
 <html lang="en">
   <head>
@@ -12,15 +21,15 @@
         <div class="border shadow-2xl rounded-xl overflow-hidden">
       <div
         class="border border-slate-900 w-full h-60 bg-cover bg-center rounded-t-xl rounded-b-3xl "
-        style="background-image: url(../dist/img/1.jpg)"
+        style="background-image: url(../dist/img/<?= $DataList['foto'] ?>)"
       ></div>
         <div id="caoursel-container" class="flex">
           <div class="carousel-slide flex-shrink-0 justify-center w-full p-5">
-            <h1 class="text-center font-bold text-2xl -mt-2 mb-2">IVAN SHOLANA</h1>
+            <h1 class="text-center font-bold text-2xl -mt-2 mb-2"><?= $DataList['NAMALENGKAP'] ?></h1>
             <label for="nama_panjang" class="text-sm">NIM</label>
             <input
               disabled
-              value="1203210030"
+              value="<?= $DataList['NIM'] ?>"
               name="nama_panjang"
               id="nomer_telepon"
               type="text"
@@ -29,7 +38,7 @@
             <label for="nama_panjang" class="text-sm">No Telepon</label>
             <input
               disabled
-              value="085336267015"
+              value="<?= $DataList['NoHP'] ?>"
               name="nama_panjang"
               id="nomer_telepon"
               type="text"
@@ -43,9 +52,7 @@
               cols="30"
               rows="3"
               class="border focus:placeholder:text-transparent placeholder:text-sm focus:outline-none w-full mt-2 rounded-md py-3 px-3 border-slate-400 mb-4 focus:border-sky-600 focus:ring-1 focus:ring-sky-500"
-            >
-Jl. Raya Dringu Kabupaten Probolinggo, Provinsi Jawa Timur</textarea
-            >
+            ><?= $DataList['Alamat'] ?></textarea>
             <button
                   class="next-button bg-slate-800 text-white w-full py-2 rounded-lg"
                 >
@@ -53,11 +60,11 @@ Jl. Raya Dringu Kabupaten Probolinggo, Provinsi Jawa Timur</textarea
                 </button>
           </div>
           <div class="carousel-slide flex-shrink-0 justify-center w-full px-5 pt-5 ">
-            <h1 class="text-center font-bold text-2xl -mt-2 mb-2">IVAN SHOLANA</h1>
+            <h1 class="text-center font-bold text-2xl -mt-2"><?= $DataList['NAMALENGKAP'] ?></h1>
             <label for="nama_panjang" class="text-sm">Hobi</label>
             <input
             disabled
-            value="Belajar"
+            value="<?= $DataList['Hobby'] ?>"
             name="Hobi"
             id="Hobi"
             type="text"
@@ -66,23 +73,32 @@ Jl. Raya Dringu Kabupaten Probolinggo, Provinsi Jawa Timur</textarea
           <label for="nama_panjang" class="text-sm">Program Studi</label>
             <input
             disabled
-            value="FTIB"
+            value="<?= $DataList['Prodi'] ?>"
             name="Fakultas"
             id="Fakultas"
             type="text"
             class="border focus:placeholder:text-transparent placeholder:text-sm focus:outline-none w-full mt-2 rounded-md py-1 px-3 border-slate-400 mb-4 focus:border-sky-600 focus:ring-1 focus:ring-sky-500"
           />
+          <label for="nama_panjang" class="text-sm">Fakultas</label>
+          <input
+          disabled
+          value="<?= $DataList['Fakultas'] ?>"
+          name="Fakultas"
+          id="Fakultas"
+          type="text"
+          class="border focus:placeholder:text-transparent placeholder:text-sm focus:outline-none w-full mt-2 rounded-md py-1 px-3 border-slate-400 mb-4 focus:border-sky-600 focus:ring-1 focus:ring-sky-500"
+        />
           <label for="Jenis_Kelamin" class="text-sm">Jenis Kelamin</label>
             <input
             disabled
-            value="Laki - Laki"
+            value="<?= $DataList['JenisKelamin'] ?>"
             name="Jenis_Kelamin"
             id="Jenis_Kelamin"
             type="text"
             class="border focus:placeholder:text-transparent placeholder:text-sm focus:outline-none w-full mt-2 rounded-md py-1 px-3 border-slate-400 mb-4 focus:border-sky-600 focus:ring-1 focus:ring-sky-500"
           />
           <button
-                  class="prev-button bg-slate-800 text-white w-full py-2 rounded-lg mt-8"
+                  class="prev-button bg-slate-800 text-white w-full py-2 rounded-lg"
                 >
                   KEMBALI
                 </button>
