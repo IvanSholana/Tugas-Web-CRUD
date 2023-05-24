@@ -43,7 +43,7 @@ if(isset($_POST['submit_data'])){
   }
   if(isset($_GET['NIM'])){
     if(!empty($ImgName)){
-      $ImgName = Upload($nama_file,$error,$tmpName);
+      $ImgName = Upload($nama_file,$error,$tmpName,$foto);
     }
     elseif(!empty($foto)){
       $ImgName = $foto;

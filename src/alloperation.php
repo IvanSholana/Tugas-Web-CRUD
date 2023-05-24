@@ -5,6 +5,7 @@ function InputData($connection,$NIM,$NamaLengkap,$Alamat,$NoTelepon,$Hobi,$Prodi
         ('$NIM','$NamaLengkap','$NoTelepon','$Alamat','$Hobi','$Prodi','$Fakultas','$JenisKelamin','$gambar')")){
             echo "<script> 
             alert('SIMPAN DATA SUKSES!!!');
+            window.location.href = 'ListMahasiswa.php'
              </script>";
         }else{
             echo "<script> 
