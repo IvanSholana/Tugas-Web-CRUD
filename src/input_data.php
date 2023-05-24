@@ -7,7 +7,7 @@ $connection = koneksi("mahasiswa");
 $NIM = null;
 $Nama_Lengkap = null;
 $NomerHP = null;
-$Alamat = null;
+$Alamat = "";
 $Hobi = null;
 $JenisKelamin = null;
 $Prodi = null;
@@ -115,10 +115,11 @@ if(isset($_POST['submit_data'])){
                 cols="30"
                 rows="5"
                 class="border focus:placeholder:text-transparent placeholder:text-sm focus:outline-none w-full mt-2 rounded-md py-3 px-3 border-slate-400 mb-4 focus:border-sky-600 focus:ring-1 focus:ring-sky-500"
-              ><?= $Alamat ?> </textarea>
-              <div class="flex justify-center">
+              ><?= $Alamat ?></textarea>
+              <div class="flex justify-center space-x-5">
+              <a href="ListMahasiswa.php" class="bg-slate-800 text-white w-1/2 py-2 rounded-lg mt-10 text-center">LIST MAHASISWA</a>
                 <button type="button"
-                  class="next-button bg-slate-800 text-white w-full py-2 rounded-lg mt-10"
+                  class="next-button bg-slate-800 text-white w-1/2 py-2 rounded-lg mt-10"
                 >
                   LANJUTKAN
                 </button>

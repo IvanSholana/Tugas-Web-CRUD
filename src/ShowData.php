@@ -154,7 +154,7 @@ $connection = koneksi("mahasiswa");
               <input value="<?= $DataList['JenisKelamin'] ?>" type="text" disabled class="border focus:placeholder:text-transparent placeholder:text-sm focus:outline-none w-3/4 mt-2 rounded-md py-1 px-3 border-slate-400 focus:border-sky-600 focus:ring-1 focus:ring-sky-500" />
             </div>
             <div class="flex w-3/4 justify-center mx-auto absolute left-0 ms-5">
-              <a href="listMahasiswa.php" class="bg-slate-600 text-white font-bold w-3/4 text-center py-1 rounded-xl hover:bg-slate-800 mt-6">KEMBALI</a>
+              <a href="listMahasiswa.php" class="bg-slate-800 text-white w-3/4 text-center py-1 rounded-lg hover:bg-slate-800 mt-6">KEMBALI</a>
             </div>
           </div>
         </div>
